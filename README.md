@@ -218,6 +218,7 @@ npm start
 ```
 The React app will be available at `http://localhost:3000`.
 
+
 ### 3. WebSocket Client Logic
 The React app initiates a WebSocket connection to the backend using `ws://localhost:8000/ws/{client_id}`. Each session generates a unique `client_id` upon loading the app.
 
