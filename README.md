@@ -48,82 +48,6 @@ application that requires bidirectional communication or live updates.
 
 An overview of the application's file structure, highlighting the backend, frontend, and Docker configurations.
 
-## Prerequisites
-
-List of required tools and dependencies, such as Python, Node.js, Docker, and .NET SDK.
-
-## Backend Setup (FastAPI)
-
-### Install Dependencies
-
-Instructions for installing FastAPI and other necessary packages.
-
-### Run the FastAPI Server
-
-Guide to start the backend server and verify it’s running.
-
-### WebSocket Endpoints
-
-Description of the WebSocket endpoints and their roles in the application.
-
-### Broadcasting Messages
-
-Explanation of how the backend handles message broadcasting to all connected clients.
-
-## Frontend Setup (React)
-
-### Install Dependencies
-
-Guide for setting up and installing dependencies for the React frontend.
-
-### Run the React Application
-
-Instructions to start the frontend application and access it in a web browser.
-
-### WebSocket Client Logic
-
-Overview of the WebSocket client logic implemented in the React frontend.
-
-## C# (.NET) WebSocket Client in Docker
-
-### Dockerfile Configuration
-
-Description of the Dockerfile used to containerize the C# WebSocket client.
-
-### Building and Running the Docker Container
-
-Steps to build and run the Docker container for the C# client.
-
-### Connecting with a Client ID
-
-Instructions on how the Dockerized client connects to the WebSocket server using a unique Client ID.
-
-## Docker Setup for FastAPI
-
-### Build the Docker Image
-
-Guide for building a Docker image for the FastAPI backend.
-
-### Run the Docker Container
-
-Instructions to start the FastAPI server in a Docker container.
-
-## Integrating the Frontend and Backend
-
-### Initial API Call for Client ID
-
-Explanation of the initial API call to obtain a Client ID for each connected client.
-
-### Using the Client ID in WebSocket Connections
-
-How the Client ID is used to establish WebSocket connections and identify clients.
-
-## References and Further Reading
-
-List of resources for further exploration on WebSocket, FastAPI, and real-time communication.
-
----
-
 ```shell
 root/
 ├── .venv/                    # Virtual environment for Python dependencies
@@ -175,12 +99,14 @@ fastapi dev api.py
 The server will be available at `http://localhost:8000`.
 The  Swagger UI documentation will be available at `http://localhost:8000/docs`, alternative API docs (ReDoc) `http://127.0.0.1:8000/redoc`.
 
-### 3. WebSocket Endpoints
+**Note:** An HTML example is embedded to facilitate interaction and is ignored for readability during testing purposes.
+
+## 3. WebSocket Endpoints
 - GET `/`: This endpoint serves an HTML page with a WebSocket client interface, allowing quick testing of WebSocket functionality.
-- GET `/ws/{client_id}`: This endpoint establishes a WebSocket connection, where `{client_id}` is a unique identifier for each client. This WebSocket endpoint supports fullduplex communication, allowing clients to send and receive messages in real-time.
+- GET `/ws/{client_id}`: This endpoint establishes a WebSocket connection, where `{client_id}` is a unique identifier for each client. This WebSocket endpoint supports full-duplex communication, allowing clients to send and receive messages in real-time.
 
 ### 4. Broadcasting Messages
-The backend enables multiduplex communication where each client can send messages that are broadcasted to all connected clients. Here’s how message broadcasting works:
+The backend enables multiduplex communication where each client can send messages that are broadcast to all connected clients. Here’s how message broadcasting works:
 
 - Personal Messages: Messages sent by a client are echoed back to that client as:
 ```plaintext
