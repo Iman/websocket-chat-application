@@ -14,34 +14,6 @@ establish a bi-directional, asynchronous connection over HTTP/S.
 2. Multiduplex Broadcasting with FastAPI framework, the server supports real-time, multiduplex 
 communication. This enables broadcast messaging to all connected clients, making it an ideal foundation for any 
 application that requires bidirectional communication or live updates.
-
-## Table of Contents
-
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Backend Setup (FastAPI)](#backend-setup-fastapi)
-  - [Install Dependencies](#install-dependencies)
-  - [Run the FastAPI Server](#run-the-fastapi-server)
-  - [WebSocket Endpoints](#websocket-endpoints)
-  - [Broadcasting Messages](#broadcasting-messages)
-- [Frontend Setup (React)](#frontend-setup-react)
-  - [Install Dependencies](#install-dependencies-1)
-  - [Run the React Application](#run-the-react-application)
-  - [WebSocket Client Logic](#websocket-client-logic)
-- [C# (.NET) WebSocket Client in Docker](#c-net-websocket-client-in-docker)
-  - [Dockerfile Configuration](#dockerfile-configuration)
-  - [Building and Running the Docker Container](#building-and-running-the-docker-container)
-  - [Connecting with a Client ID](#connecting-with-a-client-id)
-- [Docker Setup for FastAPI](#docker-setup-for-fastapi)
-  - [Build the Docker Image](#build-the-docker-image)
-  - [Run the Docker Container](#run-the-docker-container)
-- [Integrating the Frontend and Backend](#integrating-the-frontend-and-backend)
-  - [Initial API Call for Client ID](#initial-api-call-for-client-id)
-  - [Using the Client ID in WebSocket Connections](#using-the-client-id-in-websocket-connections)
-- [Testing](#testing)
-- [Deploying to Production](#deploying-to-production)
-- [References and Further Reading](#references-and-further-reading)
-
 ---
 
 ## Project Structure
